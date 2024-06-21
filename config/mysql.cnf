@@ -24,6 +24,12 @@ init-connect='SET NAMES utf8'
 character-set-server = utf8
 
 #
+# Drupal recommends READ-COMMITED and Pantheon uses that configuration as well
+# https://www.drupal.org/docs/getting-started/system-requirements/setting-the-mysql-transaction-isolation-level
+#
+transaction_isolation="READ-COMMITTED"
+
+#
 # Instead of skip-networking the default is now to listen only on
 # localhost which is more compatible and is not less secure.
 bind-address = 0.0.0.0
